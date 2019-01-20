@@ -1,4 +1,5 @@
-FROM phusion/baseimage:latest
+FROM ubuntu:bionic
+#ubuntu:bionic
 LABEL maintainer="marda.firmansyah@zenofa.com"
 
 # Tell the container there is no tty
@@ -19,6 +20,5 @@ RUN apt-get update \
 
 COPY . /app
 
-RUN chmod +x /app/bin/*
-
-RUN ln -s /app/bin/set_timezone.sh /etc/my_init.d/00_set_timezone.sh
+RUN chmod a+x /app/bin/*.sh && \
+/app/bin/set_timezone.sh
