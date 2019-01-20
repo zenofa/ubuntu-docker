@@ -1,5 +1,5 @@
-FROM ubuntu:bionic
-#ubuntu:bionic
+FROM phusion/baseimage
+
 LABEL maintainer="marda.firmansyah@zenofa.com"
 
 # Tell the container there is no tty
